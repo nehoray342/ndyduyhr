@@ -1,7 +1,14 @@
+input.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("myBtn").click();
+    }
+  });
+
 function calculate_fibo() {
     var user_input = document.getElementById("userinput").value;
-    var result = fiboloop(user_input);
-    document.getElementById("fiboresult").innerHTML = result;
+    var result = getNthPrime(user_input);
+    document.getElementById("fibo_result").innerHTML = result;
 }
 
 function fiborec(aaa) {
